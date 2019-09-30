@@ -146,8 +146,9 @@ export default {
             })
           window.location.reload(true)
         }).catch(err => {
-          console.log(err)
-          this.loading = false
+          if (err) {
+            this.loading = false
+          }
         })
     }
   }
