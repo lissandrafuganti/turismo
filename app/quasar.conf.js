@@ -9,6 +9,7 @@ module.exports = function (ctx) {
     boot: [
       'i18n',
       'axios'
+      // 'notify'
     ],
 
     // https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-css
@@ -19,7 +20,7 @@ module.exports = function (ctx) {
     // https://github.com/quasarframework/quasar/tree/dev/extras
     extras: [
       // 'ionicons-v4',
-      // 'mdi-v4',
+      'mdi-v4',
       // 'fontawesome-v5',
       // 'eva-icons',
       // 'themify',
@@ -31,8 +32,8 @@ module.exports = function (ctx) {
 
     // https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-framework
     framework: {
-      // iconSet: 'ionicons-v4', // Quasar icon set
-      // lang: 'de', // Quasar language pack
+      iconSet: 'mdi-v4', // Quasar icon set
+      lang: 'pt-br', // Quasar language pack
 
       // Possible values for "all":
       // * 'auto' - Auto-import needed Quasar components & directives
@@ -47,7 +48,11 @@ module.exports = function (ctx) {
       directives: [],
 
       // Quasar plugins
-      plugins: []
+      plugins: [
+        'Notify',
+        'Meta',
+        'Cookies'
+      ]
     },
 
     // https://quasar.dev/quasar-cli/cli-documentation/supporting-ie
@@ -56,7 +61,7 @@ module.exports = function (ctx) {
     // https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-build
     build: {
       scopeHoisting: true,
-      // vueRouterMode: 'history',
+      vueRouterMode: 'history',
       // showProgress: false,
       // gzip: true,
       // analyze: true,
@@ -72,6 +77,7 @@ module.exports = function (ctx) {
           exclude: /node_modules/,
           options: {
             formatter: require('eslint').CLIEngine.getFormatter('stylish')
+
           }
         })
       }
