@@ -8,6 +8,11 @@ const routes = [
     ]
   },
   {
+    path: '/recuperar-senha',
+    name: 'PRecuperarSenha',
+    component: () => import('pages/RecuperarSenha.vue')
+  },
+  {
     path: '/login',
     name: 'PLogin',
     component: () => import('pages/Login.vue')
