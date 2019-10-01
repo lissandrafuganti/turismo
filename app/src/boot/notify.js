@@ -1,4 +1,5 @@
 
+import Vue from 'vue'
 import { Notify } from 'quasar'
 
 const notification = (icon, message, position, color) => {
@@ -11,4 +12,4 @@ const notification = (icon, message, position, color) => {
   })
 }
 
-export default notification
+Vue.prototype.$notify = notification

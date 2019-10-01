@@ -93,7 +93,6 @@
 </template>
 
 <script>
-import notification from '../utils/notify'
 import { Cookies } from 'quasar'
 export default {
   name: 'PLogin',
@@ -134,17 +133,17 @@ export default {
             for (let e of res.data.info) {
               if (e.cdg_erro) {
                 this.loading = false
-                return notification('mdi-alert-octagon', e.msg, 'top-right', 'red-9')
+                return this.$notify('mdi-alert-octagon', e.msg, 'top-right', 'red-9')
               }
             }
           }
-          notification('mdi-check-all', 'Login efetuado com sucesso', 'top-right', 'cyan-9')
+          this.$notify('mdi-check-all', 'Login efetuado com sucesso', 'top-right', 'cyan-9')
           Cookies.set('authentication', res.data.dados,
             {
               expires: 10,
               path: '/'
             })
-          window.location.reload(true)
+          window.location.href = '/'
         }).catch(err => {
           if (err) {
             this.loading = false
