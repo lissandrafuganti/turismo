@@ -142,13 +142,14 @@ export default {
               }
             }
           }
+          res.data.dados.empresa = this.dados.empresa
           this.$notify('mdi-check-all', 'Login efetuado com sucesso', 'top-right', 'cyan-9')
           Cookies.set('authentication', res.data.dados,
             {
               expires: 10,
               path: '/'
             })
-          window.location.href = '/mbtms/'
+          window.location.href = '/mbtms'
         }).catch(err => {
           if (err) {
             this.loading = false

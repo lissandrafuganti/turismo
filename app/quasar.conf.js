@@ -51,7 +51,8 @@ module.exports = function (ctx) {
       plugins: [
         'Notify',
         'Meta',
-        'Cookies'
+        'Cookies',
+        'Dialog'
       ]
     },
 
@@ -87,7 +88,7 @@ module.exports = function (ctx) {
     devServer: {
       // https: true,
       // port: 8080,
-      open: true // opens browser window automatically
+      open: false // opens browser window automatically
     },
 
     // animations: 'all', // --- includes all animations
