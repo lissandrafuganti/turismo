@@ -103,7 +103,7 @@ export default {
     }
   },
   created () {
-    if (Cookies.has('authentication')) return this.$router.push({ 'name': 'PDashboard' })
+    if (Cookies.has('authentication')) return this.$router.push({ 'name': 'RouteDashboard' })
   }
 }
 </script>

@@ -12,11 +12,11 @@
         <img src="https://cdn.quasar.dev/img/boy-avatar.png">
       </q-avatar>
       <div class="text-weight-bold">{{usuario}}</div>
-      <div>
+      <div class="text-right">
         <q-btn
           dense
           flat
-          color="red-9"
+          color="white"
           label="Sair"
           no-caps=""
           icon="mdi-logout-variant"

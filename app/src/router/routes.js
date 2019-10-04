@@ -4,7 +4,14 @@ const routes = [
     path: '/',
     component: () => import('layouts/MyLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/Index.vue'), name: 'PDashboard', meta: { requiresAuth: true } }
+      { path: '', component: () => import('pages/Index.vue'), name: 'RouteDashboard', meta: { requiresAuth: true } }
+    ]
+  },
+  {
+    path: '/reservas',
+    component: () => import('layouts/MyLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/Reservas.vue'), name: 'RouteReservas', meta: { requiresAuth: true } }
     ]
   },
   {

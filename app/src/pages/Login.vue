@@ -113,7 +113,7 @@ export default {
     }
   },
   created () {
-    if (Cookies.has('authentication')) return this.$router.push({ 'name': 'PDashboard' })
+    if (Cookies.has('authentication')) return this.$router.push({ 'name': 'RouteDashboard' })
   },
   methods: {
     login () {
@@ -149,7 +149,8 @@ export default {
               expires: 10,
               path: '/'
             })
-          window.location.href = '/mbtms'
+          // window.location.href = '/mbtms'
+          this.$router.push({ name: 'RouteReservas' })
         }).catch(err => {
           if (err) {
             this.loading = false

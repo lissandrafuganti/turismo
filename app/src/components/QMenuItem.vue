@@ -1,16 +1,17 @@
 <template>
-  <q-card class="bg-indigo-5">
+  <q-card class="bg-indigo-7">
     <q-card-section
-      class="q-pa-sm q-pl-md text-white"
+      class="no-padding text-white"
       v-for="(item, i) in itens"
       :key="i"
     >
       <q-item
         v-ripple
         clickable
-        dense
-        :to="{name: item.url}"
-        class="text-white"
+        :to="{name: item.url || 'RouteDashboard'}"
+        class="q-pl-xl text-white"
+        exact
+        exact-active-class
       >
         <q-item-section avatar>
           <q-icon :name="item.icon"></q-icon>
