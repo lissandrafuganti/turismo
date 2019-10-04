@@ -110,32 +110,52 @@
 
         <div class="col-12 col-md-2 offset-md-1 text-right">
           <fieldset>
+
             <div class="row text-left">
               <div class="col left">
-                Pax {{pax}}
+                <div class="row">
+                  <div class="col">Pax </div>
+                  <div class="col">{{pax}}</div>
+                </div>
               </div>
               <div class="col text-right">
-                Alm {{alm}}
+                <div class="row">
+                  <div class="col">Alm </div>
+                  <div class="col">{{alm}}</div>
+                </div>
               </div>
             </div>
 
             <div class="row text-left">
               <div class="col text-left">
-                Chd {{chd}}
+                <div class="row">
+                  <div class="col">Chd</div>
+                  <div class="col">{{chd}}</div>
+                </div>
               </div>
               <div class="col text-right">
-                Total {{total}}
+                <div class="row">
+                  <div class="col">Total</div>
+                  <div class="col">{{total}}</div>
+                </div>
               </div>
             </div>
 
             <div class="row text-left">
               <div class="col text-left">
-                Crt {{crt}}
+                <div class="row">
+                  <div class="col">Crt</div>
+                  <div class="col">{{crt}}</div>
+                </div>
               </div>
               <div class="col text-right">
-                Vagas {{vagas}}
+                <div class="row">
+                  <div class="col">Vagas</div>
+                  <div class="col">{{vagas}}</div>
+                </div>
               </div>
             </div>
+
           </fieldset>
         </div>
       </div>

@@ -23,6 +23,7 @@ export default {
       columns: [
         { name: 'hora', field: 'hora', label: 'Hora', align: 'center' },
         { name: 'vg', field: 'vg', label: 'VG', align: 'center' },
+        { name: 'passeio', field: 'passeio', label: 'Passeio', align: 'left' },
         { name: 'lot', field: 'lot', label: 'Lot', align: 'center' },
         { name: 'reserva', field: 'reserva', label: 'Reserva', align: 'center' },
         { name: 's', field: 's', label: 'S', align: 'center' },
@@ -59,12 +60,13 @@ export default {
         }
       }
 
-      console.log(dados)
+      // console.log(dados)
 
       this.$axios.post('', dados).then(res => {
-        console.log(res.data)
+        // console.log(res.data)
       }).catch(err => {
-        console.log(err)
+        if (err) { }
+        // console.log(err)
       })
     }
   }
